@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MercanPage.master.cs" Inherits="MercanPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<title><%Response.Write(_StrPageTitle.ToString()); %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+<meta http-equiv="Content-Language" content="tr">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="description" content="<% Response.Write(_StrPageDescription.ToString()); %>" />
+<meta name="key phrase" content="asp, host, web hosting, reseller, server, dedicated, yavuzmercan, alan adi, domain tescil, php, shell, asp.net, domain transfer, mysql, izmit web hosting, izmit hosting, ucuz alan adi kaydi, ucuz domain, ucuz alan, kaliteli hosting, aninda aktivasyon" />
+<meta name="keywords" content="<% Response.Write(_StrPageKeywords.ToString()); %>" />
+<meta name="title" content="Mercan Yazılım Software Technology's Yavuz MERCAN" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9" />
+<meta http-equiv="robots" content="index,follow" />
+<meta http-equiv="content-language" content="tr" />
+<meta name="target" content="Web Design Services" />
+<meta name="allow-search" content="yes" />
+<meta name="audience" content="all" />
+<meta name="Classification" content="Web Hosting" />
+<meta name="Classification" content="Web Design Services" /> 
+<meta name="Classification" content="Web Desktop Technology's" />
+<meta name="Classification" content="Visual Studio C#.Net" />
+<meta name="Classification" content="Ajax" />
+<meta name="distribution" content="global" />
+<meta name="robots" content="index, follow" />
+<meta name="Revisit-After" content="7 Days" />
+<meta name="author" content="Yavuz MERCAN Web Desktop Technology" />
+<meta name="rating" content="all" />
+<meta name="url" content="www.yavuzmercan.com" />
+<meta http-equiv="content-type" content="application/xhtml; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="rokbox/mootools-release-1.11.js"></script>
+<script type="text/javascript" src="rokbox/rokbox.js"></script>
+<link href="rokbox/themes/dark/rokbox-style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="rokbox/themes/dark/rokbox-config.js"></script>
+
+  
+  <!--[if lt IE 8.]>
+<link rel="stylesheet" type="text/css" href="css/style-ie.css" />
+<![endif]-->
+ <!--[if lt IE 7.]>
+<link rel="stylesheet" type="text/css" href="css/style-ie6.css" />
+<![endif]-->
+
+<!--  STEP ONE: insert path to SWFObject JavaScript -->
+<script type="text/javascript" src="js/swfobject/swfobject.js"></script>
+
+<!--  STEP TWO: configure SWFObject JavaScript and embed CU3ER slider -->
+<script type="text/javascript">
+    var flashvars = {};
+    flashvars.xml = "config.xml";
+    flashvars.font = "font.swf";
+    var attributes = {};
+    attributes.wmode = "transparent";
+    attributes.id = "slider";
+    swfobject.embedSWF("cu3er.swf", "cu3er-container", "920", "327", "9", "expressInstall.swf", flashvars, attributes);
+</script>
+
+
+</head>
+
+<body>
+
+    <form id="form1" runat="server">
+
+<!-- Main Body Starts Here -->
+<div id="main_body">
+<!-- Top Part Starts Here -->
+<div id="top_part">
+
+<!-- Top Part Image Starts Here -->
+<div id="top_part_image">
+
+<!-- Logo Part Starts Here -->
+<div id="main_logo">
+<a href="Default.aspx"><img src="images/MC-5.png"  alt="Design3Edge" 
+        style="height: 70px; width: 217px"  /></a>
+</div>
+<!-- Logo Part Ends Here -->
+</div>
+<!-- Top Part Image Ends Here -->
+
+<!-- Main Menu Starts Here -->
+<div id="main_menu_bg">
+<!-- Main Menu Body Starts Here -->
+<div id="main_menu_body">
+
+<!-- Menu Links Starts Here -->
+<%
+    Response.Write("<div class='menu_links'>");
+    for (int i = 0; i < _dtMenu.Rows.Count; i++)
+    {
+        Response.Write("<a href='" + _dtMenu.Rows[i]["MenuUrl"].ToString() + "'class='menu_links'>" + _dtMenu.Rows[i]["MenuAdi"].ToString() + "</a><span class='menu_border'>&nbsp;</span>");
+    }
+    Response.Write("</div>");
+     %>
+<!-- Menu Links Ends Here -->
+
+</div>
+<!-- Main Menu Body Ends Here -->
+</div>
+<!-- Main Menu Ends Here -->
+
+</div>
+<!-- Top Part Ends Here -->
+
+<!-- Content Body Starts Here -->
+<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+<!-- Content Body Ends Here -->
+
+<!--Footer Starts Here -->
+<div id="footer">
+<div class="left">
+<div class="footer_links" ><a  href="Default.aspx">AnaSayfa</a> &nbsp;| &nbsp;<a  href="Hizmetler.aspx">Hizmetler</a> 
+	&nbsp;| &nbsp;<a  href="Urun.aspx">Ürünler</a> &nbsp;| &nbsp;<a  href="Hosting.aspx">Hosting</a> &nbsp;| &nbsp;<a  href="iletisim.aspx">İletişim</a></div></div>
+
+<div class="right" style="padding-right:30px;"><%Response.Write(_StrPageFooter.ToString()); %></div>
+
+</div>
+<!-- Footer Ends Here -->
+
+
+</div>
+<!-- Main Body Ends Here -->
+
+    </form>
+
+ </body>
+</html>

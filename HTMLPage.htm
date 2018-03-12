@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Yonetici_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MercaN YazılıM - Yönetici Panel</title>
+<link rel="stylesheet" type="text/css" href="css/theme.css" />
+<link rel="stylesheet" type="text/css" href="css/style2.css" />
+
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="css/ie-sucks.css" />
+<![endif]-->
+    </head>
+
+<body>
+	<form id="form1" runat="server">
+	<div id="container">
+    	<div id="header">
+        	<h2>Mercan YazılıM Yönetici Panel</h2>
+    <div id="topmenu">
+            	<ul>
+                	<li class="current"><a href="Default.aspx">Ansayfa</a></li>
+                    <li><a href="Urunler.aspx">Ürünler</a></li>
+                	<li><a href="Hizmetler.aspx">Hizmetler</a></li>
+                    <li><a href="Hosting.aspx">Hosting</a></li>
+                    <li><a href="Yazilim.aspx">Yazılım</a></li>
+                    <li><a href="Siparis.aspx">Siparişler</a></li>
+                    <li><a href="Referans.aspx">Referanslar</a></li>
+                    <li><a href="SlideShow.aspx">SlideShow</a></li>
+                    <li><a href="Ayar.aspx">Ayarlar</a></li>
+              </ul>
+          </div>
+      </div>
+        <div id="top-panel">
+            <div id="panel">
+
+                <asp:Button ID="Button1" runat="server" CssClass="user" onclick="Button1_Click" 
+                    Text="   Çıkış" />
+
+            &nbsp;<asp:Label ID="_lbluser" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+
+            </div>
+      </div>
+        <div id="wrapper">
+            <div id="content">
+       			<div id="rightnow">
+                    <h3 class="reallynow">
+                        <span>Hoşgeldin Sahip</span>
+
+                        <br />
+                    </h3>
+				    <p class="youhave">Toplam Haber Sayısı: 
+                        <asp:Label ID="_lblHaber" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+&nbsp;Onaylanmayan Sipariş Sayısı
+                        <asp:Label ID="_lblSiparis" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+&nbsp;Toplam Okunmamış 
+                        <asp:Label ID="_lblMesaj" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+&nbsp;Mesajınız Var</strong>
+                    </p>
+			  </div>
+              <div id="infowrap">
+              <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+              </div>
+            </div>
+            <div id="sidebar">
+  				<ul>
+                	<li><h3><a href="Haber.aspx" class="house">Haber-Ekle/Sil</a></h3>
+                    </li>
+                    <li><h3><a href="Urunler.aspx" class="folder_table">Ürün-Ekle/Sil</a></h3>
+                    </li>
+                    <li><h3><a href="Referans.aspx" class="manage">Referans-Ekle/Sil</a></h3>
+                    </li>
+                    <li><h3><a href="Hizmetler.aspx" class="house">Hizmet-Ekle/Sil</a></h3>
+                    </li>
+                    <li><h3><a href="Yazilim.aspx" class="house">Yazılım-Ekle/Sil</a></h3>
+                    </li>
+                  <li><h3><a href="Hosting.aspx" class="user">Hosting-Ekle/Sil</a></h3>
+                    </li>
+                    <li><h3><a href="SSS.aspx" class="folder_table">SSS-Ekle/Sil</a></h3>
+                    </li>
+                    <li><h3><a href="Kampanya.aspx" class="manage">Kampnya-Ekle/Sil</a></h3>
+                    </li>
+				</ul>       
+          </div>
+      </div>
+        <div id="footer">
+        <div id="credits">
+   		Powered by <a href="http://www.mercanyazilim.net">MercanYazilim</a>
+        </div>
+            <br />
+
+        </div>
+</div>
+    </form>
+</body>
+</html>
